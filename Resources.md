@@ -6,3 +6,7 @@
 [Python Workshop](https://hackmd.io/s/rkzGgh0om)
 
 [Ideas/Issues for Messenger Bots](https://docs.google.com/document/d/1l02pFelYcAd-SOwR5Er9jAVp_hWGBFoLajuOnTePX1I/edit)
+
+### Workshop 2: Echo Bot
+[Dictionary Python Challenge](https://github.com/eceusc/project-messenger-bot/blob/master/challenge.py)
+[First Messenger Bot: Echo Bot](https://hackmd.io/p/BkVzRMe4V#/)
