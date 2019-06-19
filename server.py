@@ -5,10 +5,10 @@ from pprint import pprint
 
 app = Flask(__name__)
 
-PAGE_ACCESS_TOKEN = "EAAg82CRkfT8BADnt6D9OdFG2Fkw8ravr8INDmn5R3bZANz5MUNlO1Fj4zgSEFXEibM5urpUGI5AwwrpdU4jBJNYP25s4YT0ioM3R5ZA8wR29aTS6NwwPowChxC7eDaLFNcYeAMrekWOt5GugnEwWqXdnsPwTKsYkZCuJ0Dak8gbaudZBDgus"
+PAGE_ACCESS_TOKEN = "[INSERT YOUR PAGE ACCESS TOKEN HERE]"
 bot = Bot(PAGE_ACCESS_TOKEN)
 
-VERIFICATION_TOKEN = "hello"
+VERIFICATION_TOKEN = "[INSERT YOUR VERIFICATION TOKEN HERE]"
 
 @app.route('/', methods=['GET'])
 # Webhook validation
@@ -23,7 +23,7 @@ def verify():
 @app.route('/', methods=['POST'])
 def webhook():
   data = request.get_json()
-  log(data)
+  pprint(data)
   data = dict([(str(k), v) for k, v in data.items()])
   
   if data['object'] == 'page':
@@ -42,11 +42,6 @@ def webhook():
             bot.send_text_message(sender_id, response)
   
   return 'ok', 200
-
-
-def log(message):
-	pprint(message)
-	sys.stdout.flush()
 
 if __name__ == "__main__":
 	app.run()
